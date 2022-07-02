@@ -14,6 +14,11 @@
   src: url(../webfonts/Cairo-Medium.ttf);
   font-display: swap;
 }
+@font-face {
+  font-family: "Pe-icons";
+  src: url(../webfonts/Pe-icon-7-stroke.ttf);
+  font-display: swap;
+}
  
 /***
 
@@ -586,20 +591,31 @@ header#header .header-top {
   position: relative;
   display: inline-block;
   text-align: center;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 40px;
   font-family: "Font-1";
   letter-spacing: 0.01em;
-  color:#fff ;
+  color: #fff;
   background: #0090ca;
-  padding: 0px 31.5px;
+  padding: 0px 40.5px;
   height: 40px;
   border-left: 1px solid #ffffff80;
   opacity: 1;
   transition: all 300ms ease;
 }
 .main-menu .navigation>li>a i{
-  padding-left: 20px;
+  padding-left: 19px;
+    font-size: 22px;
+    padding-top: 0px;
+    font-family: "pe-icons";
+    position: relative;
+    right: -5px;
+    top: 6px;
+    font-style: normal;
+    line-height: 16px;
+}
+.pe-7s-home:before {
+  content: "\e648";
 }
 /* .main-menu .navigation li>a {
   display: flex !important;
@@ -924,7 +940,7 @@ content{
   margin-bottom: 30px;
 }
 .sal-info{
-  background: #f7f7f7;
+  background: #f2f2f280;
   width: 100%;
   height: auto;
   padding: 15px;
@@ -972,30 +988,37 @@ content{
 }
 .sal-info .third-col label{
   font-size: 14px;
-  color: #6f6e6e;
+  color: #404040;
   margin-bottom: 4px;
   font-weight: 600;
   font-family: "Font-1";
 }
 .sal-info .third-col input{
   border-radius: 0;
-  background: #d1d0d0;
+  background: #e2e2e2;
 }
 .sal-info .third-col input::placeholder{
   font-family: "Font-1";
   text-align: center;
   font-size: 134x;
   font-weight: 700;
-  color: #646363;
+  color: #6b6b6b;
 }
 .sal-info .form-empty{
   margin: 60px 0 30px;
 }
 .sal-info .form-empty input{
   border-radius: 0;
-  background: #d1d0d0;
-  border-bottom: 2px solid #0389bf;
+  background: #e2e2e2;
+  border-bottom: 2px solid #009ddc;
   margin-bottom: 20px;
+}
+.sal-info .verify input{
+  width: 100%;
+  color: #404040;
+  border: 1px solid #e9e9ea;
+  padding: 6px 5px 6px;
+  background: #ffffffd9;
 }
 .sal-info .form-empty input::placeholder{
   font-weight: 500;
@@ -1004,11 +1027,11 @@ content{
   border-radius: 0;
   font-size: 13px;
   font-weight: 700;
-  color: #646363;
+  color: #6b6b6b;
 }
 .sal-info .form-empty label{
   font-size: 14px;
-  color: #5b5b5b;
+  color: #404040;
   margin-bottom: 4px;
   font-weight: 700;
   font-family: "Font-1";
@@ -1018,12 +1041,170 @@ content{
 }
 .sal-info .form-empty .back{
   border-radius: 0;
-  background: #a9a6a6;
+  background: #ababab;
   color: #fff;
   padding: 2px 15px;
   font-size: 16px;
   font-weight: 600;
 }
+.sal-info .form-empty .verif{
+  background: #35aa47;
+  color: #fff;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+/* ====================================
+captcha image
+========================================*/
+.wrapper .captcha-area{
+  display: flex;
+  height: 65px;
+  margin: 30px 0 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.captcha-area .captcha-img{
+  height: 100%;
+  width: 345px;
+  user-select: none;
+  background: #000;
+  border-radius: 5px;
+  position: relative;
+}
+.captcha-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  opacity: 0.95;
+}
+.captcha-img .captcha{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  color: #fff;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 3px;
+  transform: translate(-50%, -50%);
+  text-shadow: 0px 0px 2px #b1b1b1;
+  font-family: "Font-1";
+  font-style: italic;
+  font-weight: 700;
+}
+.wrapper button{
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: #4db2ec;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.wrapper button:hover{
+  background: #2fa5e9;
+}
+.captcha-area .reload-btn{
+  width: 75px;
+    height: 100%;
+    font-size: 25px;
+    background: none;
+    color: #009ddc;
+}
+.captcha-area .reload-btn i{
+  transition: transform 0.3s ease;
+  font-family: "pe-icons";
+  font-weight: 700;
+  font-size: 39px;
+  font-style: normal;
+}
+.captcha-area .reload-btn:hover i{
+  transform: rotate(15deg);
+}
+.pe-7s-refresh-2:before {
+  content: "\e6c2";
+}
+.wrapper .input-area{
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+.input-area input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding-left: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+}
+.input-area input:is(:focus, :valid){
+  padding-left: 19px;
+  border: 2px solid #4db2ec;
+}
+.input-area input::placeholder{
+  color: #bfbfbf;
+}
+.input-area .check-btn{
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  font-size: 17px;
+  height: 45px;
+  padding: 0 20px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.input-area input:valid + .check-btn{
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrapper .status-text{
+  display: none;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 -5px;
+}
+
+@media (max-width: 506px){
+  body{
+    padding: 0 10px;
+  }
+  .wrapper{
+    padding: 22px 25px 35px;
+  }
+  .wrapper header{
+    font-size: 25px;
+  }
+  .wrapper .captcha-area{
+    height: 60px;
+  }
+  .captcha-area .captcha{
+    font-size: 28px;
+    letter-spacing: 5px;
+  }
+  .captcha-area .reload-btn{
+    width: 60px;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+  .wrapper .input-area{
+    height: 55px;
+  }
+  .input-area .check-btn{
+    height: 40px;
+  }
+  .wrapper .status-text{
+    font-size: 15px;
+  }
+  .captcha-area .captcha-img{
+    width: 250px;
+  }
+}
+
 /*-------------------------------------
     Footer
 ---------------------------------------*/
@@ -1042,15 +1223,15 @@ content{
 }
 .footer .widegt li a{
   font-size: 13px;
-  color: #e3e2e2;
+  color: #dedede;
   font-family: "Font-2";
   font-weight: 500;
 }
 .footer .widegt li img{
-  width: 160px;
+  width: 150px;
   height: auto;
-  margin-bottom: 15px;
-  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-right: 40px;
 }
 .footer-bottom{
   background: #0f4a69;
@@ -1075,4 +1256,227 @@ content{
   width: 52px;
   height: 25px;
   margin-right: 13px;
+}
+/* ------------------------------
+main-menu
+------------------------------*/
+#nav_menu ul {
+	list-style: none;
+	position: relative;    /* So the first submenu can be positioned within the main menu */
+}
+#nav_menu ul ul {
+	display: none;         /* Don't display submenu until hover of the li element */
+	position: absolute;
+	top: 100%;             /* Position the submenu at the bottom of the main menu */
+}
+#nav_menu ul ul li {
+	float: none;           /* Display the submenus vertically */
+	position: relative;    /* So the second submenu can be positioned within the first submenu */
+}
+#nav_menu ul ul li ul {
+	position: absolute;
+	left: -100%;           /* Position the second submenu at the left side of the li element */ 
+	top: 0;                /* Position the second submenu at the top of the li element */
+}
+#nav_menu ul li:hover > ul {
+	display: block;        /* Display the submenu on hover of the li element */
+}
+#nav_menu ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+/* The styles for the formatting of the multi-tier navigation menu */
+#nav_menu ul {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+/* #nav_menu ul li a {
+	text-align: center;
+	display: block;
+	padding: 1em 0;
+	text-decoration: none;
+	background-color: blue;
+	color: white;
+	font-weight: bold;
+} */
+
+/* #nav_menu ul li a.current {
+	color: yellow;
+} */
+/* #nav_menu ul li a:hover, #nav_menu ul li a:focus {
+	background-color: gray;
+} */
+#nav_menu ul li ul{
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  list-style: none;
+  width: 220px !important;
+  position: absolute;
+  top: 46px;
+  right: -1px;
+  border: 1px solid #eaeaea;
+  border-top: 0;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  border-radius: 0;
+  display: none;
+}
+#nav_menu ul li:hover ul {
+	width: 100%;
+  height: auto;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  display: block;
+}
+#nav_menu ul li ul li{
+  padding: 0px;
+  position: relative;
+}
+#nav_menu ul.navigation li ul li a{
+  display: block;
+  font-size: 11px;
+  color: #909090;
+  text-decoration: none;
+  padding: 4px 5px 5px;
+  border-bottom: 1px dotted #ccc;
+  line-height: 27px;
+  outline: none;
+  font-weight: 400;
+  width: 220px !important;
+  text-align: right;
+}
+#nav_menu ul li ul li:last-child a{
+  border-bottom: 0;
+}
+#nav_menu ul li ul li a:hover{
+  color: #d0981b;
+}
+/* #nav_menu ul li:hover ul li a {
+	display: block;
+	width: 178px;
+	text-align: center;
+} */
+.slicknav_menu {
+	display: none;
+}
+
+@media only screen and (max-width: 959px) {
+#nav_menu ul li a {
+	font-size: .875em;                      /* 14 / 16 */
+}
+}
+@media only screen and (max-width: 767px) {
+#nav_menu {
+	display: none;
+}
+.slicknav_menu {
+	display: block;
+}
+}
+@media (max-width: 480px){
+  header#header .header-top .header-top-right img{
+    float: none;
+    margin-bottom: 10px;
+  }
+  header#header .header-top .header-top-right span {
+    margin-right: 0px;
+    width: auto;
+    text-align: center;
+    display: block;
+}
+header#header .header-top .header-top-right img.clogo{
+  display: none;
+}
+header#header .header-top .control-btn{
+  width: 100%;
+  margin-top: 15px;
+}
+header#header .header-top .my-date{
+  display: none;
+}
+.main-header .header-upper .inner-container{
+  padding: 0 11px;
+}
+.breadcrumbs .bread-list{
+  display: block;
+  padding: 0 10px;
+}
+.breadcrumbs .bread-list li a {
+  padding: 3px 0px 0px 0px;
+  padding-right: 10px;
+  padding-left: 1px;
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 9px;
+  color: #626262;
+  font-family: "Font-2";
+}
+.breadcrumbs .bread-icon{
+  display: none;
+}
+.salary,.sal-info{
+  padding: 7px;
+}
+.sal-info .first-col{
+  margin: 40px 15px 10px;
+}
+.sal-info .first-col h4{
+  font-size: 11px;
+}
+.sal-info .second-col img{
+  margin: 2% auto 1%;
+}
+.sal-info .form-empty label {
+  font-size: 12px;
+}
+.sal-info .form-empty input{
+  margin-bottom: 8px;
+}
+.sal-info .form-empty {
+  margin: 45px 0 30px;
+}
+.footer{
+  background-size: cover;
+  padding-bottom: 0;
+}
+.footer .widegt{
+  padding-right: 0px;
+  border-right: none;
+}
+.footer .widegt ul{
+  background: #00000033;
+  margin: 3px;
+  padding: 10px;
+}
+.footer .widegt ul.mobileapp{
+  background: none;
+  border-top: 1px dotted #ccc;
+  display: inline-block;
+  width: 100%;
+}
+.footer .widegt ul.mobileapp li{
+  display: inline-block;
+}
+.footer .widegt li img{
+  margin-right: 15px;
+}
+.footer-bottom p{
+  text-align: center;
+  font-size: 13px;
+  border-bottom: 1px solid #ffffff4d;
+  padding-bottom: 10px;
+}
+.footer-bottom .left-text {
+  float: none;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.pe-7s-home:before{
+  content: none;
+}
 }

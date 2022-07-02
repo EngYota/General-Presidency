@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html>
 <head>
   <!-- Required meta tags -->
@@ -167,99 +167,44 @@
     <div class="salary">
       <div class="sal-info">
         <div class="info-sal">
-          <h4> معلومات تعريف الراتب </h4>
-        </div>
-        <div class="row">
-          <div class="col-lg-5 col-md-6 col-xs-12">
-            <div class="first-col">
-              <h4>المملكة العربية السعودية</h4>
-              <h4>الرئاسة العامة لهيئة الأمر بالمعروف والنهى عن المنكر</h4>
-              <h4>الإدارة العامة للموارد البشرية </h4>
-              <h4>إدارة العمليات - قسم التعويضات والامتيازات</h4>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 col-xs-12">
-            <div class="second-col">
-              <img src="img/main_logo.png"/>
-            </div>
-          </div>
-          <div class="col-lg-5 col-md-6 col-xs-12">
-            <div class="third-col">
-              <form>
-                <div class="form-group">
-                  <label>التاريخ</label>
-                  <input type="text" class="form-control" placeholder="1442/03/08" disabled/>
-                </div>
-                <div class="form-group">
-                  <label>رقم الإفادة</label>
-                  <input type="text" class="form-control" placeholder="202010615077" disabled/>
-                </div>
-              </form>
-            </div>
-          </div>
+          <h4> التحقق من تعريف الراتب </h4>
         </div>
         <form>
-          <div class="row form-empty">
+          <div class="row form-empty verify">
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="form-group">
-                <label> رقم السجل المدنى </label>
-                <input type="text" class="form-control" placeholder="1065365775" disabled/>
-              </div>
-              <div class="form-group">
-                <label> رقم الوظيفة </label>
-                <input type="number" class="form-control" placeholder="2571" disabled/>
-              </div>
-              <div class="form-group">
-                <label> الراتب </label>
-                <input type="number" class="form-control" placeholder="7,895 ريال" disabled/>
-              </div>
-              <div class="form-group">
-                <label> حالة الموظف </label>
-                <input type="text" class="form-control" placeholder="على رأس عمله" disabled/>
+                <label> رقم السجل المدنى /ID  </label><span style="color: red;">*</span>
+                <input type="text" class="form-control" required/>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="form-group">
-                <label> الاسم </label>
-                <input type="text" class="form-control" placeholder="خالد بن عبدالله بن زيدالسبيعي" disabled/>
-              </div>
-              <div class="form-group">
-                <label> الوظيفة </label>
-                <input type="text" class="form-control" placeholder="عضو هيئة" disabled/>
-              </div>
-              <div class="form-group">
-                <label> بدل النقل </label>
-                <input type="text" class="form-control" placeholder="700 ريال" disabled/>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="form-group">
-                <label> المرتبة </label>
-                <input type="text" class="form-control" placeholder="06" disabled/>
-              </div>
-              <div class="form-group">
-                <label> بداية الخدمة </label>
-                <input type="text" class="form-control" placeholder="20-09-1436" disabled/>
-              </div>
-              <div class="form-group">
-                <label> البدلات </label>
-                <input type="text" class="form-control" placeholder="0 ريال" disabled/>
+                <label> رقم الإفادة/No. of Statment </label><span style="color: red;">*</span>
+                <input type="text" class="form-control" required/>
               </div>
             </div>
           </div>
-          <div class="row form-empty">
-            <div class="col-md-8"></div>
-            <div class="col-md-4 ">
-              <div class="form-group">
-                <label> مدير الموارد البشرية (فرع الرياض) </label>
-                <input type="text" class="form-control" placeholder="عبدالقادر بن عيسى بن مقبل الذكير" disabled/>
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="captcha-area">
+              <div class="captcha-img">
+                <img src="img/captcha-bg.png" alt="Captch Background">
+                <span class="captcha"></span>
               </div>
+              <button class="reload-btn"><i class="pe-7s-refresh-2 pe-2x"></i></button>
+            </div>
+            <form action="#" class="input-area">
+              <input type="text" maxlength="6" spellcheck="false" required>
+            </form>
+            <div class="status-text"></div>
             </div>
           </div>
           <hr/>
           <div class="row form-empty">
+           
             <div class="form-group">
-              <button type="button" class="back">رجوع</button>
+              <button type="button" class="back verif">تحقق</button>
+              <button type="button" class="back">إلغاء</button>
             </div>
           </div>
         </form>
@@ -372,6 +317,7 @@
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="js/jquery.hijri.date.js"></script>
   <script src="js/silcknav.js"></script>
+  <script src="js/script.js"></script>
   <script src="js/Custom.js"></script>
   <script>
     $('.my-date').hijriDate({
