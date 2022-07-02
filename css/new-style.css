@@ -551,6 +551,7 @@ header#header .header-top {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  width: 100%;
 }
 
 @media(min-width: 992px) {
@@ -577,6 +578,7 @@ header#header .header-top {
   float: right;
   padding: 25px 0px 0px;
   transition: all 300ms ease;
+  width: calc(100% / 7 );
 }
 
 .main-menu .navigation>li:last-child {
@@ -596,8 +598,9 @@ header#header .header-top {
   font-family: "Font-1";
   letter-spacing: 0.01em;
   color: #fff;
+  width: 100%;
   background: #0090ca;
-  padding: 0px 40.5px;
+  /* padding: 0px 40.5px; */
   height: 40px;
   border-left: 1px solid #ffffff80;
   opacity: 1;
@@ -1293,22 +1296,6 @@ main-menu
 	margin: 0;
 	padding: 0;
 }
-/* #nav_menu ul li a {
-	text-align: center;
-	display: block;
-	padding: 1em 0;
-	text-decoration: none;
-	background-color: blue;
-	color: white;
-	font-weight: bold;
-} */
-
-/* #nav_menu ul li a.current {
-	color: yellow;
-} */
-/* #nav_menu ul li a:hover, #nav_menu ul li a:focus {
-	background-color: gray;
-} */
 #nav_menu ul li ul{
   padding: 0;
   margin: 0;
@@ -1363,7 +1350,21 @@ main-menu
 .slicknav_menu {
 	display: none;
 }
-
+/* @media only screen and (max-width: 1699px) {
+  .main-menu .navigation>li>a{
+    padding: 0px 40.5px;
+  }
+}
+@media only screen and (max-width: 1340px) {
+  .main-menu .navigation>li>a{
+    padding: 0px 41.5px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .main-menu .navigation>li>a{
+    padding: 0px 24.5px;
+  }
+} */
 @media only screen and (max-width: 959px) {
 #nav_menu ul li a {
 	font-size: .875em;                      /* 14 / 16 */
@@ -1387,6 +1388,7 @@ main-menu
     width: auto;
     text-align: center;
     display: block;
+    font-size: 11px;
 }
 header#header .header-top .header-top-right img.clogo{
   display: none;
@@ -1423,10 +1425,12 @@ header#header .header-top .my-date{
   padding: 7px;
 }
 .sal-info .first-col{
-  margin: 40px 15px 10px;
+  margin: 40px 18px 10px;
 }
 .sal-info .first-col h4{
   font-size: 11px;
+  line-height: 19px;
+  margin-bottom: 8px;
 }
 .sal-info .second-col img{
   margin: 2% auto 1%;
