@@ -65,6 +65,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   top: 0 !important;
+  overflow-x: hidden;
 }
 
 a {
@@ -1174,10 +1175,10 @@ captcha image
 
 @media (max-width: 506px){
   body{
-    padding: 0 10px;
+    padding: 0px;
   }
   .wrapper{
-    padding: 22px 25px 35px;
+    padding: 0px;
   }
   .wrapper header{
     font-size: 25px;
