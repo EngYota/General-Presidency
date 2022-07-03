@@ -1070,7 +1070,7 @@ captcha image
 }
 .captcha-area .captcha-img{
   height: 100%;
-  width: 345px;
+  width: 210px;
   user-select: none;
   background: #000;
   border-radius: 5px;
@@ -1085,18 +1085,25 @@ captcha image
 }
 .captcha-img .captcha{
   position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 100%;
-  color: #fff;
-  font-size: 35px;
-  text-align: center;
-  letter-spacing: 3px;
-  transform: translate(-50%, -50%);
-  text-shadow: 0px 0px 2px #b1b1b1;
-  font-family: "Font-1";
-  font-style: italic;
-  font-weight: 700;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    color: #fff;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    transform: translate(-50%, -50%);
+    /* text-shadow: 0px 0px 2px #b1b1b1; */
+    font-family: "Font-2";
+    font-weight: 700;
+    font-variant-numeric: oldstyle-nums;
+    font-variant-caps: all-petite-caps;
+    font-style: italic;
+    background-image: linear-gradient(to left, blue, green, blue,green, blue, green, blue, green);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 .wrapper button{
   outline: none;
@@ -1205,7 +1212,7 @@ captcha image
     font-size: 15px;
   }
   .captcha-area .captcha-img{
-    width: 250px;
+    width: 220px;
   }
 }
 
