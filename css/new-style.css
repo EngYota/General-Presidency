@@ -213,7 +213,7 @@ body.boxed-wrapper {
 
 .auto-container {
   position: static;
-  max-width: 1200px;
+  max-width: 1170px;
   padding: 0px 15px;
   margin: 0 auto;
 }
@@ -388,6 +388,12 @@ figure {
 .pull-left {
   float: left;
 }
+.container{
+  max-width: 1170px;
+  padding: 0 10px;
+  margin: auto;
+  position: relative;
+}
 /*
  * header.scss
  * -----------------------------------------------
@@ -403,6 +409,13 @@ header#header{
   border-bottom: 1px solid #d8d8d8;
   background-size: 70px;
   padding: 25px 0 10px 0;
+}
+header#header .header-top .container,
+header#header .header-upper .container{
+  max-width: 1170px;
+  margin: auto;
+  position: relative;
+  padding: 0 10px;
 }
 header#header .header-top .header-top-right img{
     width: 80px;
@@ -1011,15 +1024,25 @@ content{
 .sal-info .form-empty{
   margin: 60px 0 30px;
 }
-.sal-info .form-empty input{
+.sal-info .form-empty label.input-label{
+  display: block;
+  color: #6b6b6b;
+  font-size: 15px;
   border-radius: 0;
   background: #e2e2e2;
-  border-bottom: 2px solid #009ddc;
+  height: 37px;
+  text-indent: 15px;
+  border-bottom: 1px solid #009ddc;
   margin-bottom: 20px;
+  padding-top: 2px;
+  font-family: "Font-1";
+  font-weight: bold;
 }
+
 .sal-info .verify input{
   width: 100%;
   color: #404040;
+
   border: 1px solid #e9e9ea;
   padding: 6px 5px 6px;
   background: #ffffffd9;
@@ -1030,7 +1053,7 @@ content{
   text-align: right;
   border-radius: 0;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: bold;
   color: #6b6b6b;
 }
 .sal-info .form-empty label{
@@ -1066,7 +1089,7 @@ captcha image
   height: 65px;
   margin: 30px 0 20px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: right;
 }
 .captcha-area .captcha-img{
   height: 100%;
